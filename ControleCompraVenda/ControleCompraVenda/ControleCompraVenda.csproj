@@ -1,0 +1,444 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0B714963-9D8A-48D5-ADE0-8F5AF41EBDC2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ControleCompraVenda</RootNamespace>
+    <AssemblyName>ControleCompraVenda</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>6</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>45ED0945B8F099F3A474354BD860AC97AC77041F</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>ControleCompraVenda_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ControleCompraVenda.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HtmlElements, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\HtmlElements.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\Debug\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.6.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\CaixaMovimentoController.cs" />
+    <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\EmpresaController.cs" />
+    <Compile Include="Controllers\EstoqueController.cs" />
+    <Compile Include="Controllers\FrenteCaixaController.cs" />
+    <Compile Include="Controllers\ImpressaoController.cs" />
+    <Compile Include="Controllers\MaterialController.cs" />
+    <Compile Include="Controllers\MaterialTipoController.cs" />
+    <Compile Include="Controllers\ModuloGeral.cs" />
+    <Compile Include="Controllers\MovimentoController.cs" />
+    <Compile Include="Controllers\MovimentoMaterialController.cs" />
+    <Compile Include="Controllers\PagamentoController.cs" />
+    <Compile Include="Controllers\PagamentoTipoController.cs" />
+    <Compile Include="Controllers\PessoaContatoController.cs" />
+    <Compile Include="Controllers\PessoaController.cs" />
+    <Compile Include="Controllers\UsuarioController.cs" />
+    <Compile Include="Dados\Conexao.cs" />
+    <Compile Include="Dados\Config.cs" />
+    <Compile Include="Dados\Uteis\OutToExcel.cs" />
+    <Compile Include="Dados\Uteis\Css.cs" />
+    <Compile Include="Dados\Modelos\Filtro.cs" />
+    <Compile Include="Dados\Uteis\Conversao_dg.cs" />
+    <Compile Include="Dados\Modelos\Crud.cs" />
+    <Compile Include="Dados\Modelos\CrudOptions.cs" />
+    <Compile Include="Dados\DataReader.cs" />
+    <Compile Include="Dados\Uteis\GridTheme.cs" />
+    <Compile Include="Dados\Uteis\Intent.cs" />
+    <Compile Include="Dados\Uteis\MButton.cs" />
+    <Compile Include="Dados\Uteis\MComboBox.cs" />
+    <Compile Include="Dados\Uteis\MDataGridView.cs" />
+    <Compile Include="Dados\Modulo.cs" />
+    <Compile Include="Dados\Uteis\MTabControl.cs" />
+    <Compile Include="Dados\Uteis\MTextBox.cs" />
+    <Compile Include="Dados\Uteis\MToolTips.cs" />
+    <Compile Include="Dados\ObjectJson.cs" />
+    <Compile Include="Dados\Modelos\Paginacao.cs" />
+    <Compile Include="Dados\Parse.cs" />
+    <Compile Include="Dados\Request.cs" />
+    <Compile Include="Dados\Modelos\ResultRequest.cs" />
+    <Compile Include="Dados\Rotas.cs" />
+    <Compile Include="Dados\Modelos\Tabela.cs" />
+    <Compile Include="Dados\Uteis\Tempo.cs" />
+    <Compile Include="Models\CaixaMovimento.cs" />
+    <Compile Include="Models\Empresa.cs" />
+    <Compile Include="Models\Estoque.cs" />
+    <Compile Include="Models\Material.cs" />
+    <Compile Include="Models\MaterialTipo.cs" />
+    <Compile Include="Models\Movimento.cs" />
+    <Compile Include="Models\MovimentoMaterial.cs" />
+    <Compile Include="Models\Pagamento.cs" />
+    <Compile Include="Models\PagamentoTipo.cs" />
+    <Compile Include="Models\Pessoa.cs" />
+    <Compile Include="Models\PessoaContato.cs" />
+    <Compile Include="Models\Relatorios\ReciboCaixa.cs" />
+    <Compile Include="Models\Relatorios\RelEstoque.cs" />
+    <Compile Include="Models\Relatorios\RelMovimentoMateriais.cs" />
+    <Compile Include="Models\Relatorios\RelPagamentos.cs" />
+    <Compile Include="Models\Relatorios\RelPedidos.cs" />
+    <Compile Include="Models\Usuario.cs" />
+    <Compile Include="View\Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\Pdv\TelaCancelarItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Pdv\TelaCancelarItem.Designer.cs">
+      <DependentUpon>TelaCancelarItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Cadastros\TelaEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Cadastros\TelaEmpresa.Designer.cs">
+      <DependentUpon>TelaEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Relatorios\TelaEstoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Relatorios\TelaEstoque.Designer.cs">
+      <DependentUpon>TelaEstoque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pdv\TelaFrenteCaixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Pdv\TelaFrenteCaixa.Designer.cs">
+      <DependentUpon>TelaFrenteCaixa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pdv\TelaFrenteCaixaFechar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Pdv\TelaFrenteCaixaFechar.Designer.cs">
+      <DependentUpon>TelaFrenteCaixaFechar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pdv\TelaFrenteLojaOperacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Pdv\TelaFrenteLojaOperacao.Designer.cs">
+      <DependentUpon>TelaFrenteLojaOperacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pdv\TelaFrenteCaixaAlterarPreco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Pdv\TelaFrenteCaixaAlterarPreco.Designer.cs">
+      <DependentUpon>TelaFrenteCaixaAlterarPreco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TelaCaixaMovimento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TelaCaixaMovimento.Designer.cs">
+      <DependentUpon>TelaCaixaMovimento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TelaCaixaMovimentoEditar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TelaCaixaMovimentoEditar.Designer.cs">
+      <DependentUpon>TelaCaixaMovimentoEditar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TelaLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TelaLogin.Designer.cs">
+      <DependentUpon>TelaLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Cadastros\TelaMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Cadastros\TelaMaterial.Designer.cs">
+      <DependentUpon>TelaMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Cadastros\TelaMaterialEditar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Cadastros\TelaMaterialEditar.Designer.cs">
+      <DependentUpon>TelaMaterialEditar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Relatorios\TelaMovimentacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Relatorios\TelaMovimentacao.Designer.cs">
+      <DependentUpon>TelaMovimentacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Cadastros\TelaPessoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Cadastros\TelaPessoa.Designer.cs">
+      <DependentUpon>TelaPessoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Cadastros\TelaPessoaEditar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Cadastros\TelaPessoaEditar.Designer.cs">
+      <DependentUpon>TelaPessoaEditar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pdv\TelaReciboCaixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Pdv\TelaReciboCaixa.Designer.cs">
+      <DependentUpon>TelaReciboCaixa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Relatorios\TelaPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Relatorios\TelaPagamento.Designer.cs">
+      <DependentUpon>TelaPagamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Relatorios\TelaRelatorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Relatorios\TelaRelatorio.Designer.cs">
+      <DependentUpon>TelaRelatorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Relatorios\TelaRelatorioMovimentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Relatorios\TelaRelatorioMovimentos.Designer.cs">
+      <DependentUpon>TelaRelatorioMovimentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TelaMovimentacaoEditar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TelaMovimentacaoEditar.Designer.cs">
+      <DependentUpon>TelaMovimentacaoEditar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TelaSelecionarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TelaSelecionarCliente.Designer.cs">
+      <DependentUpon>TelaSelecionarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TelaSelecionarEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TelaSelecionarEmpresa.Designer.cs">
+      <DependentUpon>TelaSelecionarEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TelaSelecionarMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TelaSelecionarMaterial.Designer.cs">
+      <DependentUpon>TelaSelecionarMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Cadastros\TelaTipoMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Cadastros\TelaTipoMaterial.Designer.cs">
+      <DependentUpon>TelaTipoMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Cadastros\TelaTipoPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Cadastros\TelaTipoPagamento.Designer.cs">
+      <DependentUpon>TelaTipoPagamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Cadastros\TelaUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Cadastros\TelaUsuario.Designer.cs">
+      <DependentUpon>TelaUsuario.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\Pdv\TelaFrenteCaixaAlterarPreco.resx">
+      <DependentUpon>TelaFrenteCaixaAlterarPreco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\Pdv\TelaCancelarItem.resx">
+      <DependentUpon>TelaCancelarItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Cadastros\TelaEmpresa.resx">
+      <DependentUpon>TelaEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Relatorios\TelaEstoque.resx">
+      <DependentUpon>TelaEstoque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Pdv\TelaFrenteCaixa.resx">
+      <DependentUpon>TelaFrenteCaixa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Pdv\TelaFrenteCaixaFechar.resx">
+      <DependentUpon>TelaFrenteCaixaFechar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Pdv\TelaFrenteLojaOperacao.resx">
+      <DependentUpon>TelaFrenteLojaOperacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Relatorios\TelaPagamento.resx">
+      <DependentUpon>TelaPagamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TelaCaixaMovimento.resx">
+      <DependentUpon>TelaCaixaMovimento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TelaCaixaMovimentoEditar.resx">
+      <DependentUpon>TelaCaixaMovimentoEditar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TelaLogin.resx">
+      <DependentUpon>TelaLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Cadastros\TelaMaterial.resx">
+      <DependentUpon>TelaMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Cadastros\TelaMaterialEditar.resx">
+      <DependentUpon>TelaMaterialEditar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Relatorios\TelaMovimentacao.resx">
+      <DependentUpon>TelaMovimentacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Cadastros\TelaPessoa.resx">
+      <DependentUpon>TelaPessoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Cadastros\TelaPessoaEditar.resx">
+      <DependentUpon>TelaPessoaEditar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Pdv\TelaReciboCaixa.resx">
+      <DependentUpon>TelaReciboCaixa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Relatorios\TelaRelatorio.resx">
+      <DependentUpon>TelaRelatorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Relatorios\TelaRelatorioMovimentos.resx">
+      <DependentUpon>TelaRelatorioMovimentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TelaMovimentacaoEditar.resx">
+      <DependentUpon>TelaMovimentacaoEditar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TelaSelecionarCliente.resx">
+      <DependentUpon>TelaSelecionarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TelaSelecionarEmpresa.resx">
+      <DependentUpon>TelaSelecionarEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TelaSelecionarMaterial.resx">
+      <DependentUpon>TelaSelecionarMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Cadastros\TelaTipoMaterial.resx">
+      <DependentUpon>TelaTipoMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Cadastros\TelaTipoPagamento.resx">
+      <DependentUpon>TelaTipoPagamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Cadastros\TelaUsuario.resx">
+      <DependentUpon>TelaUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ControleCompraVenda_TemporaryKey.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ControleCompraVenda.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

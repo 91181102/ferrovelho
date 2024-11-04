@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="ControleCompraVenda.exe" version="1.0.0.5" publicKeyToken="447e76661c803a51" language="neutral" processorArchitecture="x86" type="win32" />
+  <description asmv2:iconFile="ControleCompraVenda.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="ControleCompraVenda" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+    <commandLine file="ControleCompraVenda.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ControleCompraVenda.exe" size="382416">
+      <assemblyIdentity name="ControleCompraVenda" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>y4ZAC28jz3tgTy4ZKWOXsrB6DQi4E512ZuI8rArM7h0=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HtmlElements.dll" size="37888">
+      <assemblyIdentity name="HtmlElements" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>p5tjdDzn+dsbMR/grqo6YAKxUz24dJGIhlcmJK0AOjY=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MySql.Data.dll" size="384512">
+      <assemblyIdentity name="MySql.Data" version="6.6.4.0" publicKeyToken="C5687FC88969C44D" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>j1eAvZlm2xSNNC+In1Wv1AyLSulkIXRXBCiTAhg4Hcc=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="ControleCompraVenda.exe.config" size="189">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>6N7MliNbVJSIAIPrecIshMbZ7zEoKLr5SQvud4LDUOw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ControleCompraVenda.ico" size="32988">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>AGZzeGjv8ljU2XYSFcKuN8PXcnH18xRumN6IdNJ5z9Q=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=LEMOS_NOTE\Usuario" issuerKeyHash="520fef4dd318d08da096523088d674c1839179c7" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>qk7CA/33BUJ5xprLegqV74StrFcDgSJPOL9YKdOCP2w=</DigestValue></Reference></SignedInfo><SignatureValue>NcdjHu4GVBkqFgBVFZByMQwtat4zv7wkoDgK1lxSCY+q9y4n/7TW+1Mf1CoRegAOMrV8t68apccuzaYTM+0/U8sV2pBQmSYkxtHrZBH4ryAI4WiECmDhfU6RcnxRzULOmxhgxwp5LLNkWrvlC0k9zqP0hYQFeN4aNS3k2N9CoQw=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>rOSBuGQNDyHWfO2mN18pP8IASYdL//o7FTOz017s6Bp4fwcO4ky11SRz55M5HeXTk8ygxV7d/OMGR8u7LTzQCwO3fvp8le+MqJsEjyO0GOGE0irepAZwo1lLgDCOYDGqT69OrA7gYtG6yEeE71x2btPbuiU0P7wntyTo3h1ayNk=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="6c3f82d32958bf384f22810357acad84ef950a7acb9ac6794205f7fd03c24eaa" Description="" Url=""><as:assemblyIdentity name="ControleCompraVenda.exe" version="1.0.0.5" publicKeyToken="447e76661c803a51" language="neutral" processorArchitecture="x86" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=LEMOS_NOTE\Usuario</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>frwLsRbqsZsb8wGLs0TOyjQw+NqB80S9EL7wBCTLHEc=</DigestValue></Reference></SignedInfo><SignatureValue>D59UjEDzUyPHtgepPIDMNacngtO6XW/+/800fEmhgRqt1T0+9n0/61Ss0rCyy0oc3eEPg9mjVA9mlYKivig3SwZVjsJdVARsl6jXMcLgKVJljoGIaBQjdIGSnWZq0QKKydwFW+phQVnEgW1eBq5VCMszd1AIxJATzcmeFnOx1Ec=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>rOSBuGQNDyHWfO2mN18pP8IASYdL//o7FTOz017s6Bp4fwcO4ky11SRz55M5HeXTk8ygxV7d/OMGR8u7LTzQCwO3fvp8le+MqJsEjyO0GOGE0irepAZwo1lLgDCOYDGqT69OrA7gYtG6yEeE71x2btPbuiU0P7wntyTo3h1ayNk=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB4TCCAUqgAwIBAgIQWtbZzk3n+rpDN2zUTuL2VzANBgkqhkiG9w0BAQsFADAvMS0wKwYDVQQDHiQATABFAE0ATwBTAF8ATgBPAFQARQBcAFUAcwB1AGEAcgBpAG8wHhcNMjEwNDI2MTgwMTM5WhcNMjIwNDI3MDAwMTM5WjAvMS0wKwYDVQQDHiQATABFAE0ATwBTAF8ATgBPAFQARQBcAFUAcwB1AGEAcgBpAG8wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAKzkgbhkDQ8h1nztpjdfKT/CAEmHS//6OxUzs9Ne7OgaeH8HDuJMtdUkc+eTOR3l05PMoMVe3fzjBkfLuy080AsDt376fJXvjKibBI8jtBjhhNIq3qQGcKNZS4AwjmAxqk+vTqwO4GLRushHhO9cdm7T27olND+8J7ck6N4dWsjZAgMBAAEwDQYJKoZIhvcNAQELBQADgYEAlWE1hBZaXyWl2CH1xWwg6yu9evgePXb+g+BiUjM8RCU5/p5BjvVmQrsttxjZtnMn+KvnXjURpIAFe0VoEUgVQLTGZwcBl5EjER6iu1KQxf7weACEsyB3MVIHxlPakYogto2U4R98jt1PxefjyR0Sw6EiI7uGcwxr9eboidwYGLk=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

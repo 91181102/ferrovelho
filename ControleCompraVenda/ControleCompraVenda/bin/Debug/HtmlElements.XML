@@ -1,0 +1,577 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HtmlElements</name>
+    </assembly>
+    <members>
+        <member name="T:HtmlElements.Commons.Page">
+            <summary>
+            Classe de páginas.
+            </summary>
+        </member>
+        <member name="F:HtmlElements.Commons.Page.Component">
+            <summary>
+            Obtém ou define os elementos da página.
+            </summary>
+        </member>
+        <member name="M:HtmlElements.Commons.Page.#ctor">
+            <summary>
+            Cria uma nova instância da classe de páginas.
+            </summary>
+        </member>
+        <member name="M:HtmlElements.Commons.Page.loadPage">
+            <summary>
+            Obtém a definição inicial da página.
+            </summary>
+            <returns>Retorna uma string.</returns>
+        </member>
+        <member name="M:HtmlElements.Commons.Page.Add(HtmlElements.Commons.Div)">
+            <summary>
+            Adiciona uma div na página.
+            </summary>
+            <param name="component">Nome da DIV</param>
+        </member>
+        <member name="M:HtmlElements.Commons.Page.Add(HtmlElements.Commons.Select,System.Boolean)">
+            <summary>
+            Adiciona uma ComboBox(Select) na página.
+            </summary>
+            <param name="component">Nome do elemento Select</param>
+            <param name="ShowDisable">Define se exibe itens desabilitatos.</param>
+        </member>
+        <member name="M:HtmlElements.Commons.Page.Add(HtmlElements.Commons.Table)">
+            <summary>
+            Adiciona uma tabela na página.
+            </summary>
+            <param name="component">Nome do elemento table</param>
+        </member>
+        <member name="M:HtmlElements.Commons.Page.Add(HtmlElements.Commons.Lists)">
+            <summary>
+            Adiciona uma lista na página.
+            </summary>
+            <param name="component">Nome do elemento Lista.</param>
+        </member>
+        <member name="M:HtmlElements.Commons.Page.Add(System.String)">
+            <summary>
+            Adiciona um texto solto na página.
+            </summary>
+            <param name="texto">Texto.</param>
+        </member>
+        <member name="M:HtmlElements.Commons.Page.Renderize">
+            <summary>
+            Retorna a página com todos os elementos adicinados.
+            </summary>
+            <returns>Retorna uma string.</returns>
+        </member>
+        <member name="T:HtmlElements.Commons.Title">
+            <summary>
+            Classe de títulos
+            </summary>
+        </member>
+        <member name="P:HtmlElements.Commons.Title.Id">
+            <summary>
+            Obtém ou define o nome do elemento.
+            </summary>
+        </member>
+        <member name="P:HtmlElements.Commons.Title.Value">
+            <summary>
+            Obtém ou define o valor do header.
+            </summary>
+        </member>
+        <member name="P:HtmlElements.Commons.Title.Header">
+            <summary>
+            Obtém ou define o tipo de header.
+            </summary>
+        </member>
+        <member name="M:HtmlElements.Commons.Title.#ctor(System.String,HtmlElements.Commons.TitleType)">
+            <summary>
+            Cria uma nova instância da classe de títulos.
+            </summary>
+            <param name="value">Texto do header.</param>
+            <param name="header">Tipo do Header: h1 a h6.</param>
+        </member>
+        <member name="M:HtmlElements.Commons.Title.getTitle(HtmlElements.Commons.TitleType,System.String)">
+            <summary>
+            Obtém um título.
+            </summary>
+            <param name="header">Tipo do Header: h1 a h6</param>
+            <param name="value">Texto do header.</param>
+            <returns>Retorna uma string HTML.</returns>
+        </member>
+        <member name="T:HtmlElements.Commons.TitleType">
+            <summary>
+            Classe de tipos de títulos
+            </summary>
+        </member>
+        <member name="P:HtmlElements.Commons.TitleType.type">
+            <summary>
+            Obtém ou define o tipo do título.
+            </summary>
+        </member>
+        <member name="F:HtmlElements.Commons.TitleType.h1">
+            <summary>
+            Objeto header h1.
+            </summary>
+        </member>
+        <member name="F:HtmlElements.Commons.TitleType.h2">
+            <summary>
+            Objeto header h2.
+            </summary>
+        </member>
+        <member name="F:HtmlElements.Commons.TitleType.h3">
+            <summary>
+            Objeto header h3.
+            </summary>
+        </member>
+        <member name="F:HtmlElements.Commons.TitleType.h4">
+            <summary>
+            Objeto header h4.
+            </summary>
+        </member>
+        <member name="F:HtmlElements.Commons.TitleType.h5">
+            <summary>
+            Objeto header h5.
+            </summary>
+        </member>
+        <member name="F:HtmlElements.Commons.TitleType.h6">
+            <summary>
+            Objeto header h6.
+            </summary>
+        </member>
+        <member name="M:HtmlElements.Commons.TitleType.#ctor(System.String)">
+            <summary>
+            Cria uma nova instância de titulos.
+            </summary>
+            <param name="type"></param>
+        </member>
+        <member name="P:HtmlElements.Commons.Align.align">
+            <summary>
+            Define o texto de alinhamento.
+            </summary>
+        </member>
+        <member name="F:HtmlElements.Commons.Align.Right">
+            <summary>
+            Alinha o texto à direita.
+            </summary>
+        </member>
+        <member name="F:HtmlElements.Commons.Align.Left">
+            <summary>
+            Alinha o texto à esquerda.
+            </summary>
+        </member>
+        <member name="F:HtmlElements.Commons.Align.Center">
+            <summary>
+            Alinha o texto ao centro.
+            </summary>
+        </member>
+        <member name="M:HtmlElements.Commons.Align.#ctor(System.String)">
+            <summary>
+            Cria uma nova instância da classe de alinhamento.
+            </summary>
+            <param name="align"></param>
+        </member>
+        <member name="M:HtmlElements.Commons.Align.getAlign">
+            <summary>
+            Obtém o alinhamento do texto.
+            </summary>
+            <returns>Retorna uma string.</returns>
+        </member>
+        <member name="M:HtmlElements.Commons.Columns.setAlign(HtmlElements.Commons.Align)">
+            <summary>
+            /Define o alinhamento da célula.
+            </summary>
+            <param name="align">Left, Center ou Right.</param>
+        </member>
+        <member name="M:HtmlElements.Commons.Columns.setColSpan(System.Int32)">
+            <summary>
+            Define a mesclagem das colunas.
+            </summary>
+            <param name="colSpan">Quantidade de células mescladas.</param>
+        </member>
+        <member name="M:HtmlElements.Commons.Columns.setDefaultValues">
+            <summary>
+            Carrega valores padrões para a coluna.
+            </summary>
+        </member>
+        <member name="M:HtmlElements.Commons.Columns.getColumn">
+            <summary>
+            Obtém o código Html da coluna.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HtmlElements.Commons.Columns.getValue">
+            <summary>
+            Obtém o valor da célula em formato string.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HtmlElements.Commons.Div.Add(HtmlElements.Commons.Table)">
+            <summary>
+            Adiciona um Table na div;
+            </summary>
+            <param name="content">Table.</param>
+        </member>
+        <member name="F:HtmlElements.Commons.Funcoes.VbCrLf">
+            <summary>
+            Quebra de linha.
+            </summary>
+        </member>
+        <member name="M:HtmlElements.Commons.Funcoes.getQuote(System.String)">
+            <summary>
+            Retorna um texto com aspas duplas.
+            </summary>
+            <param name="texto">Texto a ser editado.</param>
+            <returns>Retorna o mesmo texto entre aspas.</returns>
+        </member>
+        <member name="M:HtmlElements.Commons.Funcoes.Indent(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="uperValue"></param>
+            <returns></returns>
+        </member>
+        <member name="P:HtmlElements.Commons.HeaderColumn.Name">
+            <summary>
+            Obtém ou define o nome da coluna.
+            </summary>
+        </member>
+        <member name="P:HtmlElements.Commons.HeaderColumn.Text">
+            <summary>
+            Obtém ou define o texto na coluna.
+            </summary>
+        </member>
+        <member name="M:HtmlElements.Commons.Itens.Add(System.Object)">
+            <summary>
+            Adiciona um item para o atributo value na lista.
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:HtmlElements.Commons.Itens.Add(System.Object,System.Object,System.Object)">
+            <summary>
+            Adiciona uma nova instância na lista.
+            </summary>
+            <param name="id">Atributo "id".</param>
+            <param name="text">Atributo "Text".</param>
+            <param name="value">Atributo "Value".</param>
+        </member>
+        <member name="M:HtmlElements.Commons.Itens.getList">
+            <summary>
+            Obtém uma lista de itens.
+            </summary>
+            <returns>Retorna a lista de itens.</returns>
+        </member>
+        <member name="T:HtmlElements.Commons.Lists">
+            <summary>
+            Classe do elemento List.
+            </summary>
+        </member>
+        <member name="P:HtmlElements.Commons.Lists.listStyleType">
+            <summary>
+            Define o estilo do marcador de itens.
+            </summary>
+        </member>
+        <member name="P:HtmlElements.Commons.Lists.ordered">
+            <summary>
+            Obtém ou define se a lista é ordenada.
+            </summary>
+        </member>
+        <member name="P:HtmlElements.Commons.Lists.itens">
+            <summary>
+            Obtém ou define o objeto de itens da lista.
+            </summary>
+        </member>
+        <member name="P:HtmlElements.Commons.Lists.indent">
+            <summary>
+            Obtém ou define a indentação do código.
+            </summary>
+        </member>
+        <member name="P:HtmlElements.Commons.Lists.indentParent">
+            <summary>
+            Obtém ou define a identação do elemento superior.
+            </summary>
+        </member>
+        <member name="P:HtmlElements.Commons.Lists.Class">
+            <summary>
+            Obtém ou define a classe CSS do elemento.
+            </summary>
+        </member>
+        <member name="M:HtmlElements.Commons.Lists.#ctor">
+            <summary>
+            Cria uma nova instância de Listas.
+            </summary>
+        </member>
+        <member name="M:HtmlElements.Commons.Lists.#ctor(System.Boolean)">
+            <summary>
+            Cria uma nova instância da classe de listas.
+            </summary>
+            <param name="ordered">Define se a lista é ordenada.</param>
+        </member>
+        <member name="M:HtmlElements.Commons.Lists.setDefaultValues">
+            <summary>
+            Carrega os valores da classe.
+            </summary>
+        </member>
+        <member name="M:HtmlElements.Commons.Lists.setIndent(System.Int32)">
+            <summary>
+            Define a indentação do elemento superior.
+            </summary>
+            <param name="value">Valor de identação.</param>
+        </member>
+        <member name="M:HtmlElements.Commons.Lists.setListStyleType(System.String)">
+            <summary>
+            Define o tipo de lista.
+            </summary>
+            <param name="value">Nome do estilo.</param>
+        </member>
+        <member name="M:HtmlElements.Commons.Lists.getListStyleType">
+            <summary>
+            Obtém o estilo da lista.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HtmlElements.Commons.Lists.getOrderType">
+            <summary>
+            Obtém o tipo de ordenação. Com ou sem.
+            </summary>
+            <returns>Retorna o código html com o tipo de ordenação.</returns>
+        </member>
+        <member name="M:HtmlElements.Commons.Lists.getList">
+            <summary>
+            Obtém o código html de uma lista.
+            </summary>
+            <returns>Retorna uma lista.</returns>
+        </member>
+        <member name="P:HtmlElements.Commons.ListStyleType.Disc">
+            <summary>
+            Sets the list item marker to a bullet (default).
+            </summary>
+        </member>
+        <member name="P:HtmlElements.Commons.ListStyleType.Circle">
+            <summary>
+            Sets the list item marker to a circle.
+            </summary>
+        </member>
+        <member name="P:HtmlElements.Commons.ListStyleType.Square">
+            <summary>
+            Sets the list item marker to a square.
+            </summary>
+        </member>
+        <member name="P:HtmlElements.Commons.ListStyleType.None">
+            <summary>
+            The list items will not be marked.
+            </summary>
+        </member>
+        <member name="P:HtmlElements.Commons.Option.Value">
+            <summary>
+            Specifies the value to be sent to a server.
+            </summary>
+        </member>
+        <member name="P:HtmlElements.Commons.Option.Label">
+            <summary>
+            Specifies a shorter label for an option.
+            </summary>
+        </member>
+        <member name="P:HtmlElements.Commons.Option.Disabled">
+            <summary>
+            Specifies that an option should be disabled.
+            </summary>
+        </member>
+        <member name="P:HtmlElements.Commons.Option.Selected">
+            <summary>
+            Specifies that an option should be pre-selected when the page loads
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:HtmlElements.Commons.Option.#ctor" -->
+        <member name="M:HtmlElements.Commons.Option.Add(System.Object)">
+            <summary>
+            Adiciona um item para o atributo value na lista.
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:HtmlElements.Commons.Option.Add(System.Object,System.Object,System.Boolean)">
+            <summary>
+            Adiciona uma nova instância na lista.
+            </summary>
+            <param name="selected">Atributo "Selected".</param>
+            <param name="label">Atributo "Label".</param>
+            <param name="value">Atributo "Value".</param>
+        </member>
+        <member name="M:HtmlElements.Commons.Option.Add(System.Object,System.Object)">
+            <summary>
+            Adiciona uma nova instância na lista.
+            </summary>
+            <param name="label">Atributo "Label".</param>
+            <param name="value">Atributo "Value".</param>
+        </member>
+        <member name="M:HtmlElements.Commons.Option.Add(System.Object,System.Object,System.Boolean,System.Boolean)">
+            <summary>
+            Adiciona uma nova instância na lista.
+            </summary>
+            <param name="value">Atributo "Value".</param>
+            <param name="label">Atributo "Label".</param>
+            <param name="selected">Atributo "Selected".</param>
+            <param name="enabled">Atributo "Disabled".</param>
+        </member>
+        <member name="M:HtmlElements.Commons.Option.getList">
+            <summary>
+            Obtém uma lista de itens.
+            </summary>
+            <returns>Retorna a lista de itens.</returns>
+        </member>
+        <member name="M:HtmlElements.Commons.Option.getList(System.Boolean)">
+            <summary>
+            Obtém um array com os elementos da lista.
+            </summary>
+            <param name="value">Define se o atributo Disabled será visível ou não.</param>
+            <returns></returns>
+        </member>
+        <member name="P:HtmlElements.Commons.Select.Size">
+            <summary>
+            Defines the number of visible options in a drop-down list.
+            </summary>
+        </member>
+        <member name="P:HtmlElements.Commons.Select.AutoFocus">
+            <summary>
+            Specifies that the drop-down list should automatically get focus when the page loads.
+            </summary>
+        </member>
+        <member name="P:HtmlElements.Commons.Select.Disabled">
+            <summary>
+            Specifies that a drop-down list should be disabled.
+            </summary>
+        </member>
+        <member name="P:HtmlElements.Commons.Select.Form">
+            <summary>
+            Defines one or more forms the select field belongs to.
+            </summary>
+        </member>
+        <member name="P:HtmlElements.Commons.Select.Required">
+            <summary>
+            Specifies that the user is required to select a value before submitting the form.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:HtmlElements.Commons.Select.#ctor" -->
+        <member name="M:HtmlElements.Commons.Select.getList(System.Boolean)">
+            <summary>
+            Obtém o código html de uma lista.
+            </summary>
+            <returns>Retorna uma lista.</returns>
+        </member>
+        <member name="P:HtmlElements.Commons.Table.ColumnCount">
+            <summary>
+            Obtém ou define o número de colunas da tabela.
+            </summary>
+        </member>
+        <member name="P:HtmlElements.Commons.Table.Row">
+            <summary>
+            Obtém ou define as linhas de uma tabela.
+            </summary>
+        </member>
+        <member name="P:HtmlElements.Commons.Table.ColumnsName">
+            <summary>
+            Obtém ou define o nome das colunas.
+            </summary>        
+        </member>
+        <member name="M:HtmlElements.Commons.Table.setIndent(System.Int32)">
+            <summary>
+            Define a identação.
+            </summary>
+            <param name="value">Quantidade de caracteres</param>
+        </member>
+        <member name="M:HtmlElements.Commons.Table.#ctor(System.String)">
+            <summary>
+            Define o nome das colunas.
+            </summary>
+            <param name="columnsName">Nomes separados por vírgula.</param>
+        </member>
+        <member name="F:HtmlElements.Visao.Principal.t">
+            <summary>
+            Objeto para guardar textos.
+            </summary>
+        </member>
+        <member name="F:HtmlElements.Visao.Principal.page1">
+            <summary>
+            Objeto de páginas.
+            </summary>
+        </member>
+        <member name="P:HtmlElements.Visao.Principal.indent">
+            <summary>
+            Indentação inicial.
+            </summary>
+        </member>
+        <member name="M:HtmlElements.Visao.Principal.#ctor">
+            <summary>
+            Cria uma nova instântia do formulário.
+            </summary>
+        </member>
+        <member name="M:HtmlElements.Visao.Principal.Principal_Load(System.Object,System.EventArgs)">
+            <summary>
+            Ocorre quando o formulário é carregado.
+            </summary>
+            <param name="sender">Este formulário.</param>
+            <param name="e">Evento de carregar.</param>
+        </member>
+        <member name="M:HtmlElements.Visao.Principal.setEvents">
+            <summary>
+            Carrega os eventos dos controles.
+            </summary>
+        </member>
+        <member name="M:HtmlElements.Visao.Principal.loadPage">
+            <summary>
+            Carrega página de teste.
+            </summary>
+        </member>
+        <member name="M:HtmlElements.Visao.Principal.getList">
+            <summary>
+            Obtém uma lista de teste.
+            </summary>
+        </member>
+        <member name="M:HtmlElements.Visao.Principal.getComboBox">
+            <summary>
+            Obtém um comboBox de teste.
+            </summary>
+        </member>
+        <member name="M:HtmlElements.Visao.Principal.getTable">
+            <summary>
+            Carrega uma tabela de teste.
+            </summary>
+        </member>
+        <member name="F:HtmlElements.Visao.Principal.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:HtmlElements.Visao.Principal.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:HtmlElements.Visao.Principal.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:HtmlElements.Program.Main">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="T:HtmlElements.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:HtmlElements.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:HtmlElements.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+    </members>
+</doc>

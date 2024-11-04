@@ -1,0 +1,88 @@
+A empresa trabalha com compra e venda de materiais de diversos tipos.
+A compra ou venda é feita por/para pessoa física ou jurídica.
+O material é comprado ou vendido por kg e armazenado em volumes.
+
+O sistema precisa guardar da pessoa (cliente ou fornecedor),
+nome,
+cpf/cnpj (não obrigatório),
+endereço,
+contatos, que podem ser telefone e email.
+
+Dos materiais, deverá guardar:  
+tipo,
+nome,
+preço de compra,
+preço de venda,
+saldo em kg,
+saldo em volumes
+
+Da compra ou venda deverá criar um registro de movimentação contendo:
+- data de emissão
+- tipo (entrada ou saída)
+- pessoa (caso não haja identificação, o sistema manterá CLIENTE PADRÃO)
+- valor total
+- desconto
+- valor pago.
+- situação (aberto, fechado, cancelado)
+- status (pago, em aberto)
+- usuário que gerou o movimento.
+
+Do pagamento do movimento o sistema deverá guardar:
+- data do pagamento.
+- valor pago.
+- estorno (em caso de cancelar o pagamento)
+- usuário que registrou o pagamento ou estorno.
+
+De cada registro de movimentação o sistema deverá guardar:
+- o material
+- a quantidade em kg (com 3 casas decimais)
+- o preço de venda ou compra (de acordo com o tipo de movimento)
+- o total de volumes.
+- situação: normal ou estornado (em caso de cancelamento do lançamento)
+- usuário que registrou/estornou o material.
+
+
+O sistema fará as vendas/compras através de PDV, o usuário poderá:
+- abrir nova venda/compra
+- selecionar cliente ou permitir PADRÃO
+- informar o código do material com opção de procurar por nome
+- o preço será carregado (automático) de acordo com a operação (compra/venda)
+- informar a quantidade em kg (não permitir valor negativo ou zerado)
+- informar a quantidade de volumes do material.
+- confirmar lançamento do material.
+- fechar venda/compra ou deixar em aberto para edição.
+- infomar o pagamento para o movimento (quando estiver fechado) ou deixar o pagamento em aberto.
+
+- movimentos em abertos poderão ter itens cancelados.
+- movimentos fechados não poderão ser editados mas poderão ser cancelados.
+- movimentos pagos não poderão ser cancelados.
+- um movimento poderá ter vários pagamentos.
+- o sistema não deverá permitir pagamento maior do que o valor total.
+
+- o movimento em aberto poderá ser pesquisado no PDV para edição.
+
+O sistema deverá emitir relatórios (exibir na tela, imprimir ou exportar em excel).
+Movimentos (Sintético)
+filtros:
+período (data inicial e final)
+pessoa
+situação de edição (aberto, fechado, cancelado)
+situação de pagamento (em aberto, pago)
+tipo de operação (entrada/saída)
+
+Material movimentado (Analitico ou Sintético)
+filtros:
+período (data inicial e final)
+material
+tipo de material
+
+TABELAS:
+- Tipos de material (nome)
+- Materiais (nome, tipo, preço de compra, preço de venda, saldo)
+- Pessoas (nome, cnpj_cpf, endereço, obs)
+- Pessoa contato (tipo, contato, obs)
+- Movimento (data, tipo E/S, pessoa, fechado, valor, valor pago, troco, desconto, situação, observação)
+- Material Movimentado (material, quantidade, volumes, preço, situação)
+- Usuario (nome, nome de usuario, senha)
+- Empresa (nome)
+
